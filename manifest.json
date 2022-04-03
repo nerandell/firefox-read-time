@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "Read Time",
+  "version": "1.0",
+  "description": "Estimate the time it will take to read the contents of the page",
+  "homepage_url": "https://github.com/nerandell/firefox-read-time",
+  "icons": {
+    "48": "icon.svg",
+    "96": "icon.svg"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "browser_action": {
+    "default_icon": "icon.svg",
+    "default_title": "Read Time",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "read_time.js"
+      ]
+    }
+  ]
+}
+
